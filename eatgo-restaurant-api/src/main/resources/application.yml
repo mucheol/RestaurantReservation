@@ -14,3 +14,12 @@ spring:
   profiles: test
   datasource:
     url: jdbc:h2:mem:test
+
+---
+
+spring:
+  profiles: mysql
+  datasourse:
+    url: jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
